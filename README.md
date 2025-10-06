@@ -10,11 +10,11 @@ This repository presents a structured analysis of historical UK vacancy estimate
 The analysis is designed to be modular, reproducible, and extensible, with all code written in Python and version-controlled for transparency.
 
 ## Repository Contents
-- initial_script.py – First version of the analysis script with data ingestion, preparation, and model identification. 
-- UK_Vacancies_Analysis.py – Final refactored script containing all classes and functions for data acquisition, processing, visualisation, and forecasting. 
-- Notebook.ipynb – Working notebook used during development. 
-- Technical_Appendix.pdf – Detailed documentation delineating methodology, findings, and forecasting approach. 
-- Library_Requirements.txt – List of required Python packages for reproducibility. 
+- initial_script.py â€“ First version of the analysis script with data ingestion, preparation, and model identification. 
+- UK_Vacancies_Analysis.py â€“ Final refactored script containing all classes and functions for data acquisition, processing, visualisation, and forecasting. 
+- Notebook.ipynb â€“ Working notebook used during development. 
+- Technical_Appendix.pdf â€“ Detailed documentation delineating methodology, findings, and forecasting approach. 
+- Library_Requirements.txt â€“ List of required Python packages for reproducibility. 
 
 ## Versioning
 This repository contains two key commits: 
@@ -22,7 +22,11 @@ This repository contains two key commits:
 - **Final version**: Refactored into classes, added interpretive chart, finalised forecasts and generated forecast visualisation with confidence intervals. 
 
 ## How to Obtain and Run Locally
-The main script `UK_Vacancies_Analysis.py` is self-contained and automatically runs the full analysis. Simply execute the script to:
+The main script `UK_Vacancies_Analysis.py` is self-contained and automatically runs the full analysis. To execute the entire script in one step, use the following command: 
+```bash
+python UK_Vacancies_Analysis.py 
+```
+This will: 
 - Download historical CSV files, 
 - Structure and consolidate the data, 
 - Generate visualisations, 
@@ -70,3 +74,4 @@ These are listed in `Library_Requirements.txt` for convenience.
 
 ## Technical Documentation
 For a comprehensive explanation of the methodology, data handling procedures, visualisation strategy, and forecasting model, please refer to the Technical Appendix.
+
