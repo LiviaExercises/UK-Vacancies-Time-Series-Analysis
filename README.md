@@ -10,16 +10,18 @@ This repository presents a structured analysis of historical UK vacancy estimate
 The analysis is designed to be modular, reproducible, and extensible, with all code written in Python and version-controlled for transparency.
 
 ## Repository Contents
-- initial_script.py â€“ First version of the analysis script with data ingestion, preparation, and model identification. 
-- UK_Vacancies_Analysis.py â€“ Final refactored script containing all classes and functions for data acquisition, processing, visualisation, and forecasting. 
-- Notebook.ipynb â€“ Working notebook used during development. 
-- Technical_Appendix.pdf â€“ Detailed documentation delineating methodology, findings, and forecasting approach. 
-- Library_Requirements.txt â€“ List of required Python packages for reproducibility. 
+- initial_script.py – First version of the analysis script with data ingestion, preparation, and model identification. 
+- UK_Vacancies_Analysis.py – Final refactored script containing all classes and functions for data acquisition, processing, visualisation, and forecasting. 
+- Notebook.ipynb – Working notebook used during development. 
+- Technical_Appendix.pdf – Detailed documentation delineating methodology, findings, and forecasting approach. 
+- Library_Requirements.txt – List of required Python packages for reproducibility. 
 
 ## Versioning
 This repository contains two key commits: 
 - **Initial version**: Full working script with ingestion, data preparation, and forecast model identification. 
 - **Final version**: Refactored into classes, added interpretive chart, finalised forecasts and generated forecast visualisation with confidence intervals. 
+- **Post-final adjustment**: A minor command was added to the final script to ensure modular execution of the analysis pipeline. 
+
 
 ## How to Obtain and Run Locally
 The main script `UK_Vacancies_Analysis.py` is self-contained and automatically runs the full analysis. To execute the entire script in one step, use the following command: 
@@ -32,8 +34,8 @@ This will:
 - Generate visualisations, 
 - Produce forecasts with confidence intervals. 
 
-## Manual Execution (Optional)
-If you prefer to run each step manually or interact with individual components, you may use the following commands:
+## Modular Execution (Optional)
+The following manual execution steps are provided to demonstrate the modularity and reproducibility of the analysis. All core components have been refactored into callable classes and functions, allowing users to run the workflow with alternative parameters or integrate specific steps into their own pipelines. 
 
 ### 1. Clone the repository:
 ```bash
@@ -46,7 +48,7 @@ pip install -r Library_Requirements.txt
 ```
 ### 3. Run the analysis manually:
 ```python
-from vacancy_analysis import VacanciesAcquisition, VacanciesStructuring, create_visualisations, forecast_vacancies
+from UK_Vacancies_Analysis import VacanciesAcquisition, VacanciesStructuring, create_visualisations, forecast_vacancies
 
 # Download data
 vacancies = VacanciesAcquisition()
@@ -74,4 +76,3 @@ These are listed in `Library_Requirements.txt` for convenience.
 
 ## Technical Documentation
 For a comprehensive explanation of the methodology, data handling procedures, visualisation strategy, and forecasting model, please refer to the Technical Appendix.
-

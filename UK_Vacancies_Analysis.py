@@ -194,15 +194,17 @@ def forecast_vacancies(all_data, forecast_steps=6):
     fig.write_html("vacancy_forecast.html")
     return forecast_df
 
-# Execution. 
-vacancies = VacanciesAcquisition()
-vacancies.download_csv_files(start=117, end=58, delay_seconds=3)
+# Final Step: Execution of the classes and functions. 
 
-unified = VacanciesStructuring()
-all_data = unified.consolidate_all_data() 
-
-# Run visualisations. 
-create_visualisations(all_data) 
-
-# Run forecasts. 
-forecast_df = forecast_vacancies(all_data, forecast_steps=6) 
+if __name__ == "__main__": 
+    vacancies = VacanciesAcquisition()
+    vacancies.download_csv_files(start=117, end=58, delay_seconds=3)
+    
+    unified = VacanciesStructuring()
+    all_data = unified.consolidate_all_data() 
+    
+    # Run visualisations. 
+    create_visualisations(all_data) 
+    
+    # Run forecasts. 
+    forecast_df = forecast_vacancies(all_data, forecast_steps=6) 
